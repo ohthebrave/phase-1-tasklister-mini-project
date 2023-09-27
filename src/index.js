@@ -18,7 +18,8 @@ const buildTodo = (myTodos) => {
     e.target.parentNode.remove()
   })
   btn.textContent = 'X'
-  li.textContent = `${myTodos} `;
+  const currentTime = new Date();
+  li.textContent = `${myTodos} ${currentTime.getHours()}:${currentTime.getMinutes()} `;
   li.appendChild(btn);
   // console.log(li);
   document.querySelector('#tasks').appendChild(li);
